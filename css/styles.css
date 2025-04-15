@@ -1,0 +1,84 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Hidden Menus */
+.hidden-menu {
+    position: fixed;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.hidden-menu.left {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.hidden-menu.right {
+    right: 0;
+    transform: translateX(100%);
+}
+
+.hidden-menu.active {
+    transform: translateX(0);
+}
+
+/* Menu Content */
+.hidden-menu ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.hidden-menu ul li {
+    margin: 15px 0;
+}
+
+.hidden-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hidden-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Toggle Buttons */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-toggle.left {
+    left: 20px;
+}
+
+.menu-toggle.right {
+    right: 20px;
+}
+
+.menu-toggle:hover {
+    background-color: #555;
+}
