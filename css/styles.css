@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+/* Global Styles */
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -12,73 +20,127 @@ body {
     color: #333;
 }
 
-/* Hidden Menus */
-.hidden-menu {
-    position: fixed;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #333;
-    color: #fff;
-    overflow-y: auto;
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-}
-
-.hidden-menu.left {
-    left: 0;
-    transform: translateX(-100%);
-}
-
-.hidden-menu.right {
-    right: 0;
-    transform: translateX(100%);
-}
-
-.hidden-menu.active {
-    transform: translateX(0);
-}
-
-/* Menu Content */
-.hidden-menu ul {
-    list-style: none;
+/* Centered Layout */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
     padding: 20px;
 }
 
-.hidden-menu ul li {
-    margin: 15px 0;
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.hidden-menu ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
 }
 
-.hidden-menu ul li a:hover {
-    text-decoration: underline;
+header p {
+    font-size: 1.2rem;
+    color: #666;
 }
 
-/* Toggle Buttons */
-.menu-toggle {
-    position: fixed;
-    top: 20px;
+header button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
     background-color: #333;
     color: #fff;
     border: none;
-    padding: 10px 15px;
     cursor: pointer;
-    z-index: 1100;
+    border-radius: 5px;
 }
 
-.menu-toggle.left {
-    left: 20px;
-}
-
-.menu-toggle.right {
-    right: 20px;
-}
-
-.menu-toggle:hover {
+header button:hover {
     background-color: #555;
+}
+
+/* Navigation Styling */
+nav {
+    margin-bottom: 30px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Section Styling */
+main section {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+main section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+main section p, main section ul {
+    font-size: 1rem;
+    color: #555;
+}
+
+main section ul {
+    list-style: none;
+    padding: 0;
+}
+
+main section ul li {
+    margin: 5px 0;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive Design for Phone Layout */
+@media (max-width: 600px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        flex: 1 1 45%; /* Adjust width for two rows */
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
 }
